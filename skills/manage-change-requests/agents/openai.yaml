@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Change Requests"
+  short_description: "Manage local Markdown change requests"
+  default_prompt: "Use $manage-change-requests to manage this project’s local change requests."
