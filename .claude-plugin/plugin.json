@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "mylifeindigital-skills",
+  "version": "0.1.0",
+  "description": "Reusable skills shared across projects, including repository-local Markdown change request management.",
+  "author": {
+    "name": "Fredrik Erasmus"
+  },
+  "homepage": "https://github.com/mylifeindigital/mylifeindigital.skills"
+}
