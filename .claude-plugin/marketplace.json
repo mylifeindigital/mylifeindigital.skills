@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "mylifeindigital",
+  "description": "Versioned, reusable skills shared across projects.",
+  "owner": {
+    "name": "Fredrik Erasmus"
+  },
+  "plugins": [
+    {
+      "name": "mylifeindigital-skills",
+      "description": "Reusable skills shared across projects, including repository-local Markdown change request management.",
+      "author": {
+        "name": "Fredrik Erasmus"
+      },
+      "category": "productivity",
+      "source": "./",
+      "homepage": "https://github.com/mylifeindigital/mylifeindigital.skills"
+    }
+  ]
+}
