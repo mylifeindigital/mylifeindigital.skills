@@ -5,11 +5,18 @@ Claude Code.
 
 ## Available Skills
 
-### `manage-change-requests`
+### `manage-issues`
 
-Manages repository-local Markdown change requests from initial backlog note
-through reconnaissance, decisions, implementation tracking, and completion.
-Project-local instructions and templates override the bundled defaults.
+Manages planned work as GitHub issues with the `gh` CLI, from a captured idea
+through reconnaissance, decisions, board status, and closing with an outcome.
+Defaults to the `idea`/`change`/`decision` labels and the
+[My Life In Digital board](https://github.com/users/mylifeindigital/projects/4).
+Project-local instructions override the bundled defaults. Board status changes
+need `gh auth refresh -s project` once.
+
+It replaces `manage-change-requests`. Old `change-requests/` folders are a
+read-only archive; open CRs moved to issues that keep `CR-xxx` in the title.
+If you symlinked the old skill, remove that link and link `manage-issues`.
 
 ## Install For Claude Code
 
@@ -23,8 +30,8 @@ symlink approach as the Codex setup below:
 
 ```bash
 mkdir -p ~/.claude/skills
-ln -s /absolute/path/to/mylifeindigital.skills/skills/manage-change-requests \
-  ~/.claude/skills/manage-change-requests
+ln -s /absolute/path/to/mylifeindigital.skills/skills/manage-issues \
+  ~/.claude/skills/manage-issues
 ```
 
 Claude Code follows the symlink, so pulls and local edits apply immediately.
@@ -54,8 +61,8 @@ then symlink each skill you want to make available globally:
 
 ```bash
 mkdir -p ~/.agents/skills
-ln -s /absolute/path/to/mylifeindigital.skills/skills/manage-change-requests \
-  ~/.agents/skills/manage-change-requests
+ln -s /absolute/path/to/mylifeindigital.skills/skills/manage-issues \
+  ~/.agents/skills/manage-issues
 ```
 
 Codex follows the symlink to this repository, so pulls and local edits become
@@ -76,7 +83,7 @@ it before committing:
 
 ```bash
 .venv/bin/python "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py" \
-  skills/manage-change-requests
+  skills/manage-issues
 ```
 
 Adding a skill requires no manifest edit for Claude Code, but bump `version` in

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Issues"
+  short_description: "Manage GitHub issues and the project board"
+  default_prompt: "Use $manage-issues to manage this project’s GitHub issues and board status."
