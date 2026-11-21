@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "mylifeindigital-skills",
-      "description": "Reusable skills shared across projects, including repository-local Markdown change request management.",
+      "description": "Reusable skills shared across projects, including GitHub issue and project-board management.",
       "author": {
         "name": "Fredrik Erasmus"
       },
